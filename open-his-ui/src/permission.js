@@ -21,7 +21,7 @@ router.beforeEach(async(to, from, next) => {
 
   if (hasToken) {
     if (to.path === '/login') {
-      // 如果是登陆路径    直接跳转到首页
+      // 如果是登陆路径  直接跳转到首页
       next({ path: '/' })
       NProgress.done() // hack: https://github.com/PanJiaChen/vue-element-admin/pull/2939
     } else {
